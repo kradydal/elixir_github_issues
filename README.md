@@ -1,6 +1,6 @@
 # Issues
 
-Handle the command line parsing and dispatch to the various functions that end up generating a table of the last _n_ issues in a github project.
+Handle the command line parsing and dispatch to the various functions that end up generating a table of the last _n_ issues in a github project. (Programming Elixir Book)
 
 ## Installation
 
