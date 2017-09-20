@@ -8,6 +8,8 @@ defmodule Issues.Mixfile do
       version: "0.1.0",
       elixir: "~> 1.5",
       start_permanent: Mix.env == :prod,
+      name: "Issues",
+      source_url: "https://github.com/kradydal/elixir_github_issues",
       deps: deps()
     ]
   end
@@ -23,7 +25,9 @@ defmodule Issues.Mixfile do
   defp deps do
     [
       { :httpoison, "~> 0.13.0" },
-      { :poison, "~> 3.1" }
+      { :poison, "~> 3.1" },
+      { :ex_doc, "~> 0.16.4" },
+      { :earmark, "~> 1.2" }
     ]
   end
 

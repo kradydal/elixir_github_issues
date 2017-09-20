@@ -4,6 +4,7 @@ defmodule Issues.CLI do
   @default_count 4
 
   @moduledoc """
+  Handle the command line parsing and dispatch to the various functions that end up generating a table of the last _n_ issues in a github project.
   """
 
   def main(argv) do
@@ -44,8 +45,8 @@ defmodule Issues.CLI do
   def process({user, project, count}) do
     Issues.GithubIssues.fetch(user, project)
     |> decode_response
-    |> sort_into_ascending_order
     |> Enum.take(count)
+    |> sort_into_ascending_order
     |> print_table_for_columns(["number", "created_at", "title"])
   end
 
